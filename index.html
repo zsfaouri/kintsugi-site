@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  
+  <!-- SEO Meta Tags -->
+  <title>Kintsugi Dubai | Mindful Art Therapy & Life Coaching in UAE</title>
+  <meta name="description" content="Transform broken pieces into golden beginnings. Kintsugi workshops, 1:1 life coaching, and mindful art therapy in Dubai. Book your healing session today.">
+  <meta name="keywords" content="kintsugi dubai, art therapy dubai, life coaching dubai, mindfulness workshops, mental wellbeing dubai, kintsugi workshop uae">
+  <meta name="author" content="Kintsugi Dubai">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://kintsugidubai.com/">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kintsugidubai.com/">
+  <meta property="og:title" content="Kintsugi Dubai | Mindful Art Therapy & Life Coaching">
+  <meta property="og:description" content="Transform broken pieces into golden beginnings. Kintsugi workshops and life coaching in Dubai.">
+  <meta property="og:image" content="https://kintsugidubai.com/hero-image.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://kintsugidubai.com/">
+  <meta property="twitter:title" content="Kintsugi Dubai | Mindful Art Therapy & Life Coaching">
+  <meta property="twitter:description" content="Transform broken pieces into golden beginnings.">
+  <meta property="twitter:image" content="https://kintsugidubai.com/hero-image.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏺</text></svg>">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet"/>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { gold:'#C9A96E', ink:'#0A0A0A', soft:'#FAFAFA', line:'#E5E5E5' },
+          fontFamily: { display:['Playfair Display','serif'], sans:['Inter','system-ui','sans-serif'] },
+          boxShadow: { card:'0 4px 20px rgba(0,0,0,0.06)', 'card-hover':'0 8px 30px rgba(0,0,0,0.12)' }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Kintsugi Dubai",
+    "description": "Mindful art therapy and life coaching through the ancient Japanese art of Kintsugi",
+    "image": "https://kintsugidubai.com/hero-image.jpg",
+    "@id": "https://kintsugidubai.com",
+    "url": "https://kintsugidubai.com",
+    "telephone": "+971-XXX-XXX-XXXX",
+    "email": "concierge@kintsugidubai.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Dubai Design District",
+      "addressLocality": "Dubai",
+      "addressCountry": "AE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 25.1972,
+      "longitude": 55.2744
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "10:00",
+      "closes": "18:00"
+    },
+    "priceRange": "AED 900-2500",
+    "sameAs": ["https://www.instagram.com/kintsugi_dubai"]
+  }
+  </script>
+  
+  <style>
+    :root { --gold:#C9A96E; --ink:#0A0A0A; }
+    html { scroll-behavior: smooth; }
+    body { background:#fff; color:#0A0A0A; }
+    
+    .reveal { opacity:0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.revealed { opacity:1; transform: translateY(0); }
+    
+    .focus-gold:focus { outline:2px solid var(--gold); outline-offset:2px; }
+    .modal { display:none; }
+    .modal.open { display:flex; }
+    .backdrop { background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); }
+    
+    .slot { border:1px solid #E5E5E5; border-radius:0.5rem; padding:0.625rem 0.875rem; cursor:pointer; transition: all 0.2s ease; }
+    .slot:hover { border-color: var(--gold); transform: translateY(-2px); }
+    .slot.selected { background:#FFF7EC; border-color: var(--gold); box-shadow: 0 2px 8px rgba(201,169,110,0.2); }
+    
+    .badge { border:1px solid var(--gold); color: var(--gold); padding:0.25rem 0.75rem; border-radius:9999px; font-size:0.813rem; font-weight: 500; }
+    .gold-border { border-color: var(--gold); }
+    
+    .hero-overlay { background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, transparent 60%); }
+    
+    .spinner { border: 3px solid rgba(201,169,110,0.2); border-top-color: var(--gold); border-radius: 50%; width: 24px; height: 24px; animation: spin 0.8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    
+    .social-icon { transition: all 0.3s ease; }
+    .social-icon:hover { transform: translateY(-3px); color: var(--gold); }
+  </style>
+</head>
+<body class="font-sans antialiased selection:bg-gold selection:text-white">
+
+  <!-- Header -->
+  <header class="w-full border-b border-line bg-white/95 backdrop-blur-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full border-2 gold-border flex items-center justify-center bg-soft">
+          <span class="text-gold font-semibold text-sm">KD</span>
+        </div>
+        <span class="font-display text-xl md:text-2xl tracking-wide">
+          Kintsugi Dubai
+        </span>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#services" class="hover:text-gold transition">Sessions</a>
+        <a href="#products" class="hover:text-gold transition">Shop</a>
+        <a href="#narrative" class="hover:text-gold transition">Story</a>
+        <a href="#contact" class="hover:text-gold transition">Contact</a>
+        <button id="openConciergeBtn" class="px-4 py-2 border border-gold text-gold hover:bg-gold hover:text-white transition rounded-lg">
+          AI Concierge
+        </button>
+      </nav>
+      <button id="openConciergeBtnSm" class="md:hidden px-3 py-2 border border-gold text-gold hover:bg-gold hover:text-white transition rounded-lg text-sm">
+        Chat
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="reveal" id="hero">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-8 pb-12 md:pt-16 md:pb-20">
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div>
+          <span class="badge">Mindful Art • Coaching • Wellbeing</span>
+          <h1 class="font-display text-4xl sm:text-5xl md:text-6xl leading-tight mt-4">
+            We don't fix pottery. <span class="text-gold">We help people heal.</span>
+          </h1>
+          <p class="mt-5 text-neutral-600 leading-relaxed text-lg">
+            Kintsugi at KD is a mental-wellbeing practice. Through mindful art sessions, 1:1 life coaching, and curated objects, we reframe cracks as beginnings.
+          </p>
+          <div class="mt-8 flex flex-wrap items-center gap-4">
+            <a href="#services" class="px-6 py-3 bg-gold text-white rounded-lg hover:opacity-90 transition shadow-md hover:shadow-lg">
+              Book a Session
+            </a>
+            <a href="#products" class="px-6 py-3 border border-gold text-gold rounded-lg hover:bg-gold hover:text-white transition">
+              Shop Objects
+            </a>
+          </div>
+          
+          <!-- Social Media -->
+          <div class="mt-8 flex items-center gap-4">
+            <span class="text-sm text-neutral-500">Follow us:</span>
+            <a href="https://www.instagram.com/kintsugi_dubai" target="_blank" rel="noopener noreferrer" class="social-icon text-neutral-700" aria-label="Instagram">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- YOUR HERO IMAGE -->
+        <div class="relative">
+          <div class="aspect-[4/3] rounded-2xl border border-line overflow-hidden bg-soft shadow-card">
+            <div class="hero-overlay absolute inset-0 z-10"></div>
+            <img 
+              alt="Kintsugi Dubai - Woman carefully applying gold to repaired ceramic, practicing mindful art therapy" 
+              class="w-full h-full object-cover" 
+              src="hero-image.jpg"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sessions Section -->
+  <section id="services" class="reveal bg-soft">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+      <h2 class="font-display text-3xl md:text-5xl mb-4">Sessions</h2>
+      <p class="text-neutral-600 max-w-2xl mb-10 text-lg">
+        Select a guided experience. We focus on mindful process and personal narrative—no prior art skills required.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+        <button class="group text-left rounded-2xl border border-line hover:border-gold transition bg-white p-6 md:p-8 shadow-card hover:shadow-card-hover"
+                data-service='{"name":"Mindful Kintsugi Session","price":900,"mode":"in-person","duration":"2 hours"}'>
+          <div class="flex items-center justify-between">
+            <h3 class="font-display text-2xl md:text-3xl">Mindful Kintsugi Session</h3>
+            <span class="text-gold group-hover:translate-x-1 transition text-2xl">→</span>
+          </div>
+          <p class="mt-3 text-neutral-600 leading-relaxed">
+            A calming, art-led session to transform "breaks" into gold-lined stories. Small-group or private (Dubai Design District).
+          </p>
+          <div class="mt-4 text-gold font-semibold text-xl">900 AED</div>
+          <div class="mt-2 text-sm text-neutral-500">2 hours • In-person • Dubai</div>
+          <div class="mt-5 h-[1px] bg-line"></div>
+          <div class="mt-4 text-sm text-neutral-500 group-hover:text-gold transition">Click to schedule →</div>
+        </button>
+
+        <button class="group text-left rounded-2xl border border-line hover:border-gold transition bg-white p-6 md:p-8 shadow-card hover:shadow-card-hover"
+                data-service='{"name":"1:1 Life Coaching (Online)","price":2500,"mode":"online","duration":"60 minutes"}'>
+          <div class="flex items-center justify-between">
+            <h3 class="font-display text-2xl md:text-3xl">1:1 Life Coaching</h3>
+            <span class="text-gold group-hover:translate-x-1 transition text-2xl">→</span>
+          </div>
+          <p class="mt-3 text-neutral-600 leading-relaxed">
+            Personalized coaching rooted in Kintsugi philosophy—clarity, resilience, and intentional change via online session.
+          </p>
+          <div class="mt-4 text-gold font-semibold text-xl">2,500 AED</div>
+          <div class="mt-2 text-sm text-neutral-500">60 minutes • Online</div>
+          <div class="mt-5 h-[1px] bg-line"></div>
+          <div class="mt-4 text-sm text-neutral-500 group-hover:text-gold transition">Click to schedule →</div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="reveal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="font-display text-3xl md:text-5xl">Objects & Tools</h2>
+        <span class="text-sm text-neutral-500">Hand-finished</span>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-line bg-white shadow-card overflow-hidden hover:shadow-card-hover transition">
+          <img class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1600" alt="Practice ceramic set" loading="lazy"/>
+          <div class="p-5">
+            <h3 class="font-display text-xl">Practice Ceramic Set</h3>
+            <p class="text-neutral-600 text-sm mt-2">For mindful exercises at home.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-gold font-semibold text-lg">420 AED</span>
+              <button class="px-4 py-2 border border-gold text-gold rounded-lg hover:bg-gold hover:text-white transition" data-wishlist="Practice Ceramic Set">Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-line bg-white shadow-card overflow-hidden hover:shadow-card-hover transition">
+          <img class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1523419409543-22ed984411fd?q=80&w=1600" alt="Gold powder" loading="lazy"/>
+          <div class="p-5">
+            <h3 class="font-display text-xl">Antique Gold Powder</h3>
+            <p class="text-neutral-600 text-sm mt-2">For finishing seams with intention.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-gold font-semibold text-lg">280 AED</span>
+              <button class="px-4 py-2 border border-gold text-gold rounded-lg hover:bg-gold hover:text-white transition" data-wishlist="Antique Gold Powder">Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-line bg-white shadow-card overflow-hidden hover:shadow-card-hover transition">
+          <img class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1486591038957-19e7c73bdc41?q=80&w=1600" alt="Guided journal" loading="lazy"/>
+          <div class="p-5">
+            <h3 class="font-display text-xl">Kintsugi Guided Journal</h3>
+            <p class="text-neutral-600 text-sm mt-2">Four-week practice toward wholeness.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-gold font-semibold text-lg">160 AED</span>
+              <button class="px-4 py-2 border border-gold text-gold rounded-lg hover:bg-gold hover:text-white transition" data-wishlist="Kintsugi Guided Journal">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="wishlist" class="mt-8 hidden rounded-xl border border-gold bg-white/50 p-6 shadow-card">
+        <h4 class="font-display text-xl mb-3">Your Wishlist</h4>
+        <ul id="wishlistItems" class="space-y-2 text-sm"></ul>
+        <p class="mt-4 text-sm text-neutral-500">Contact us to complete your order: <a href="mailto:Kintsugi.dxb@gmail.com" class="text-gold hover:underline">Kintsugi.dxb@gmail.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Narrative Generator -->
+  <section id="narrative" class="reveal bg-soft">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+      <h2 class="font-display text-3xl md:text-5xl mb-4">Personal Narrative</h2>
+      <p class="text-neutral-600 leading-relaxed text-lg">
+        Share a few lines about a moment you're reframing. Our AI will craft a brief, elegant reflection.
+      </p>
+
+      <form id="narrativeForm" class="mt-8 grid gap-4">
+        <textarea id="narrativeInput" class="w-full rounded-xl bg-white border border-line p-5 focus-gold shadow-card resize-none" rows="4" placeholder="e.g., After a difficult year, I want a ritual that honors what cracked and what stayed..."></textarea>
+        <div class="flex items-center gap-4">
+          <button type="submit" class="px-6 py-3 bg-gold text-white rounded-lg hover:opacity-90 transition shadow-md">
+            Generate Narrative
+          </button>
+          <span id="narrativeStatus" class="text-sm text-neutral-500"></span>
+        </div>
+      </form>
+
+      <div id="narrativeOutput" class="mt-6 hidden rounded-xl border border-gold/30 p-6 bg-white shadow-card">
+        <div class="text-gold text-sm font-medium mb-3">Your Narrative:</div>
+        <div id="narrativeText" class="text-neutral-700 leading-relaxed italic"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="reveal border-t border-line">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+      <div class="grid md:grid-cols-3 gap-10">
+        <div>
+          <h3 class="font-display text-2xl mb-4">Visit</h3>
+          <p class="text-neutral-600 leading-relaxed">Dubai Design District<br/>By appointment only</p>
+          <p class="mt-2 text-neutral-500 text-sm">Mon–Sat, 10:00–18:00 GST</p>
+        </div>
+        <div>
+          <h3 class="font-display text-2xl mb-4">Contact</h3>
+          <p class="text-neutral-600"><a href="mailto:Kintsugi.dxb@gmail.com" class="hover:text-gold transition">Kintsugi.dxb@gmail.com</a></p>
+          <p class="text-neutral-600 mt-1">+971 56 650 1662</p>
+          
+          <div class="mt-4 flex items-center gap-4">
+            <a href="https://www.instagram.com/kintsugi_dubai" target="_blank" rel="noopener noreferrer" class="text-neutral-600 hover:text-gold transition" aria-label="Instagram">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-display text-2xl mb-4">Waitlist</h3>
+          <p class="text-neutral-600 mb-4">Join for atelier openings and salons.</p>
+          <form id="waitlistForm" class="flex gap-2">
+            <input id="waitlistEmail" type="email" required placeholder="you@example.com" class="flex-1 rounded-lg bg-white border border-line px-4 py-3 focus-gold shadow-sm"/>
+            <button type="submit" class="px-5 py-3 bg-gold text-white rounded-lg hover:opacity-90 transition shadow-md">Join</button>
+          </form>
+          <div id="waitlistStatus" class="mt-2 text-sm text-neutral-500"></div>
+        </div>
+      </div>
+      
+      <div class="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-line pt-8 text-sm text-neutral-500">
+        <div>© <span id="year"></span> Kintsugi Dubai. All rights reserved.</div>
+        <div class="text-xs">Made with care in Dubai 🏺</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal: Schedule -->
+  <div id="modalSchedule" class="modal fixed inset-0 z-50 items-center justify-center backdrop px-4">
+    <div class="w-full max-w-3xl rounded-2xl border border-line bg-white p-6 md:p-8 shadow-2xl max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="font-display text-2xl md:text-3xl">Schedule Session</h3>
+        <button class="text-neutral-400 hover:text-gold transition text-2xl" data-close="#modalSchedule">✕</button>
+      </div>
+      <p class="text-neutral-600 mb-6">Choose a date & time. All times are GST (Dubai).</p>
+      <div id="scheduleSummary" class="mb-6 p-4 rounded-lg bg-soft border border-line text-sm"></div>
+      <div id="calendar" class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8"></div>
+      <div class="flex items-center justify-end gap-3">
+        <button data-close="#modalSchedule" class="px-5 py-3 border border-line rounded-lg hover:bg-soft transition">Cancel</button>
+        <button id="toContactBtn" class="px-6 py-3 bg-gold text-white rounded-lg hover:opacity-90 transition shadow-md">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Contact for Booking -->
+  <div id="modalContact" class="modal fixed inset-0 z-50 items-center justify-center backdrop px-4">
+    <div class="w-full max-w-2xl rounded-2xl border border-line bg-white p-6 md:p-8 shadow-2xl">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="font-display text-2xl md:text-3xl">Complete Booking</h3>
+        <button class="text-neutral-400 hover:text-gold transition text-2xl" data-close="#modalContact">✕</button>
+      </div>
+      
+      <div id="bookingSummary" class="mb-6 p-5 rounded-xl border border-line bg-soft"></div>
+      
+      <form id="contactForm" class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium mb-2">Your Name</label>
+          <input type="text" id="clientName" required class="w-full rounded-lg border border-line px-4 py-3 focus-gold"/>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-2">Email</label>
+          <input type="email" id="clientEmail" required class="w-full rounded-lg border border-line px-4 py-3 focus-gold"/>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-2">Phone (WhatsApp)</label>
+          <input type="tel" id="clientPhone" required class="w-full rounded-lg border border-line px-4 py-3 focus-gold"/>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-2">Message (Optional)</label>
+          <textarea id="clientMessage" rows="3" class="w-full rounded-lg border border-line px-4 py-3 focus-gold"></textarea>
+        </div>
+        
+        <div class="bg-gold/10 border border-gold/30 rounded-lg p-4 text-sm">
+          <p class="font-medium mb-1">Next Steps:</p>
+          <p class="text-neutral-600">We'll contact you within 24 hours to confirm your booking and arrange payment.</p>
+        </div>
+        
+        <div class="flex gap-3">
+          <button type="button" data-close="#modalContact" class="flex-1 px-5 py-3 border border-line rounded-lg hover:bg-soft transition">Cancel</button>
+          <button type="submit" class="flex-1 px-6 py-3 bg-gold text-white rounded-lg hover:opacity-90 transition shadow-md">Send Request</button>
+        </div>
+      </form>
+      
+      <div id="contactStatus" class="mt-4 text-sm text-center"></div>
+    </div>
+  </div>
+
+  <!-- Modal: AI Concierge -->
+  <div id="modalConcierge" class="modal fixed inset-0 z-50 items-center justify-center backdrop px-4">
+    <div class="w-full max-w-2xl rounded-2xl border border-line bg-white p-6 md:p-8 shadow-2xl max-h-[90vh] flex flex-col">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="font-display text-2xl md:text-3xl">AI Concierge</h3>
+        <button class="text-neutral-400 hover:text-gold transition text-2xl" data-close="#modalConcierge">✕</button>
+      </div>
+      
+      <div id="chatLog" class="flex-1 overflow-y-auto space-y-4 mb-6 p-4 border border-line rounded-lg bg-soft max-h-96">
+        <div class="text-sm">
+          <span class="text-gold font-medium">Concierge:</span> 
+          <span class="text-neutral-700">Welcome to Kintsugi Dubai. How may I assist you today?</span>
+        </div>
+      </div>
+      
+      <form id="chatForm" class="flex gap-3">
+        <input id="chatInput" type="text" placeholder="Ask about sessions, coaching, or products..." class="flex-1 rounded-lg bg-white border border-line px-4 py-3 focus-gold shadow-sm"/>
+        <button type="submit" class="px-6 py-3 bg-gold text-white rounded-lg hover:opacity-90 transition shadow-md">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module">
+    // ============ STATE ============
+    const state = {
+      selectedService: null,
+      slotISO: null,
+      selectedDate: null,
+      selectedTime: null
+    };
+
+    // ============ HELPERS ============
+    const $ = (s) => document.querySelector(s);
+    const $$ = (s) => document.querySelectorAll(s);
+    
+    function openModal(sel) { 
+      $(sel).classList.add('open'); 
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeModal(sel) { 
+      $(sel).classList.remove('open'); 
+      document.body.style.overflow = 'auto';
+    }
+
+    // ============ REVEAL ON SCROLL ============
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('revealed');
+      });
+    }, { threshold: 0.1 });
+
+    $$('.reveal').forEach(el => observer.observe(el));
+
+    // ============ YEAR ============
+    $('#year').textContent = new Date().getFullYear();
+
+    // ============ WISHLIST ============
+    const wishlistSet = new Set();
+    $$('[data-wishlist]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const item = btn.getAttribute('data-wishlist');
+        if (wishlistSet.has(item)) {
+          wishlistSet.delete(item);
+          btn.textContent = 'Add';
+        } else {
+          wishlistSet.add(item);
+          btn.textContent = '✓ Added';
+        }
+        
+        if (wishlistSet.size > 0) {
+          $('#wishlist').classList.remove('hidden');
+          $('#wishlistItems').innerHTML = Array.from(wishlistSet)
+            .map(i => `<li class="text-neutral-700">• ${i}</li>`).join('');
+        } else {
+          $('#wishlist').classList.add('hidden');
+        }
+      });
+    });
+
+    // ============ NARRATIVE ============
+    $('#narrativeForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const input = $('#narrativeInput').value.trim();
+      if (!input) return;
+
+      $('#narrativeStatus').textContent = 'Crafting narrative...';
+      $('#narrativeOutput').classList.add('hidden');
+
+      // Demo narrative (replace with real Gemini API when configured)
+      await new Promise(r => setTimeout(r, 1500));
+      
+      const narrative = `Your story of transformation begins with acknowledging what broke. Each crack becomes a seam of gold, a testament to resilience. This is not repair—this is rebirth. Your narrative is one of beauty found in imperfection.`;
+      
+      $('#narrativeText').textContent = narrative;
+      $('#narrativeOutput').classList.remove('hidden');
+      $('#narrativeStatus').textContent = '';
+    });
+
+    // ============ CALENDAR ============
+    function buildCalendar() {
+      const cal = $('#calendar');
+      cal.innerHTML = '';
+      const today = new Date();
+      
+      for (let i = 1; i <= 28; i++) {
+        const d = new Date(today);
+        d.setDate(today.getDate() + i);
+        
+        const dayBtn = document.createElement('button');
+        dayBtn.type = 'button';
+        dayBtn.className = 'slot flex flex-col items-center justify-center py-3';
+        dayBtn.innerHTML = `
+          <div class="text-xs text-neutral-500">${d.toLocaleDateString('en-US', { weekday: 'short' })}</div>
+          <div class="text-lg font-medium">${d.getDate()}</div>
+          <div class="text-xs text-neutral-500">${d.toLocaleDateString('en-US', { month: 'short' })}</div>
+        `;
+        
+        dayBtn.addEventListener('click', () => {
+          $$('#calendar .slot').forEach(s => s.classList.remove('selected'));
+          dayBtn.classList.add('selected');
+          state.selectedDate = d.toLocaleDateString('en-US', { weekday: 'short', month: 'long', day: 'numeric' });
+          
+          const times = ['10:00', '14:00', '16:00'];
+          $('#scheduleSummary').innerHTML = `
+            <div class="font-medium mb-3">Select a time for ${state.selectedDate}:</div>
+            <div class="grid grid-cols-3 gap-2">
+              ${times.map(t => `<button type="button" class="slot py-2" data-time="${t}">${t} GST</button>`).join('')}
+            </div>
+          `;
+          
+          $$('#scheduleSummary .slot').forEach(timeBtn => {
+            timeBtn.addEventListener('click', () => {
+              $$('#scheduleSummary .slot').forEach(s => s.classList.remove('selected'));
+              timeBtn.classList.add('selected');
+              state.selectedTime = timeBtn.getAttribute('data-time');
+            });
+          });
+        });
+        
+        cal.appendChild(dayBtn);
+      }
+    }
+    buildCalendar();
+
+    // ============ SERVICE SELECTION ============
+    $$('#services [data-service]').forEach(card => {
+      card.addEventListener('click', () => {
+        state.selectedService = JSON.parse(card.getAttribute('data-service'));
+        $('#scheduleSummary').innerHTML = `<div class="text-neutral-600">Select a date for <span class="font-medium text-gold">${state.selectedService.name}</span></div>`;
+        openModal('#modalSchedule');
+      });
+    });
+
+    // ============ MODAL CONTROLS ============
+    $$('[data-close]').forEach(btn => {
+      btn.addEventListener('click', () => closeModal(btn.getAttribute('data-close')));
+    });
+
+    ['#openConciergeBtn', '#openConciergeBtnSm'].forEach(id => {
+      const el = $(id);
+      if (el) el.addEventListener('click', () => openModal('#modalConcierge'));
+    });
+
+    // ============ SCHEDULE → CONTACT ============
+    $('#toContactBtn').addEventListener('click', () => {
+      if (!state.selectedService) return alert('Please choose a session.');
+      if (!state.selectedDate || !state.selectedTime) return alert('Please choose a date & time.');
+      
+      closeModal('#modalSchedule');
+      
+      const s = state.selectedService;
+      $('#bookingSummary').innerHTML = `
+        <div class="space-y-2">
+          <div class="flex justify-between">
+            <span class="text-neutral-600">Session:</span>
+            <span class="font-medium">${s.name}</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-neutral-600">Date:</span>
+            <span class="font-medium">${state.selectedDate}</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-neutral-600">Time:</span>
+            <span class="font-medium">${state.selectedTime} GST</span>
+          </div>
+          <div class="flex justify-between pt-3 border-t border-line">
+            <span class="text-neutral-600">Price:</span>
+            <span class="text-gold font-semibold text-xl">${s.price} AED</span>
+          </div>
+        </div>
+      `;
+      
+      openModal('#modalContact');
+    });
+
+    // ============ CONTACT FORM ============
+    $('#contactForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const name = $('#clientName').value.trim();
+      const email = $('#clientEmail').value.trim();
+      const phone = $('#clientPhone').value.trim();
+      const message = $('#clientMessage').value.trim();
+      
+      $('#contactStatus').innerHTML = '<div class="spinner mx-auto"></div>';
+      
+      // Simulate sending (in production, send to your backend/email)
+      await new Promise(r => setTimeout(r, 1500));
+      
+      $('#contactStatus').innerHTML = `
+        <div class="text-gold font-medium">✓ Request sent successfully!</div>
+        <div class="text-neutral-600 mt-2">We'll contact you at ${email} within 24 hours.</div>
+      `;
+      
+      setTimeout(() => {
+        closeModal('#modalContact');
+        $('#contactForm').reset();
+        $('#contactStatus').innerHTML = '';
+      }, 3000);
+    });
+
+    // ============ CONCIERGE CHAT ============
+    const chatLog = $('#chatLog');
+    
+    function appendChat(who, text) {
+      const div = document.createElement('div');
+      div.className = 'text-sm';
+      div.innerHTML = `<span class="text-gold font-medium">${who}:</span> <span class="text-neutral-700">${text}</span>`;
+      chatLog.appendChild(div);
+      chatLog.scrollTop = chatLog.scrollHeight;
+    }
+
+    $('#chatForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const q = $('#chatInput').value.trim();
+      if (!q) return;
+      
+      appendChat('You', q);
+      $('#chatInput').value = '';
+      
+      // Demo responses (replace with real Gemini API when configured)
+      await new Promise(r => setTimeout(r, 800));
+      
+      const responses = {
+        'session': 'We offer Mindful Kintsugi Sessions (900 AED, 2 hours, in-person in Dubai) and 1:1 Life Coaching (2500 AED, 60 minutes, online). Both focus on healing through mindfulness.',
+        'price': 'Mindful Kintsugi Session is 900 AED and 1:1 Life Coaching is 2500 AED.',
+        'location': 'We are located in Dubai Design District. Sessions are by appointment only, Monday to Saturday, 10:00-18:00 GST.',
+        'default': 'I can help you with information about our sessions, coaching, products, or location. What would you like to know?'
+      };
+      
+      const response = Object.keys(responses).find(k => q.toLowerCase().includes(k)) || 'default';
+      appendChat('Concierge', responses[response]);
+    });
+
+    // ============ WAITLIST ============
+    $('#waitlistForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = $('#waitlistEmail').value.trim();
+      if (!email) return;
+
+      $('#waitlistStatus').textContent = 'Saving...';
+      
+      // Simulate saving (in production, save to Firebase/backend)
+      await new Promise(r => setTimeout(r, 1000));
+      
+      $('#waitlistStatus').textContent = '✓ Added to waitlist';
+      $('#waitlistEmail').value = '';
+      
+      setTimeout(() => $('#waitlistStatus').textContent = '', 3000);
+    });
+  </script>
+</body>
+</html>
