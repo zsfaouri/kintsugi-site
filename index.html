@@ -118,6 +118,73 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
       <div class="flex items-center gap-3">
 <img src="kd-logo.png" alt="KD Logo" width="80" style="display:block;">
+</header>
+
+<!-- Booking Section -->
+<section id="booking" class="mx-auto max-w-7xl px-4 sm:px-6 py-10">
+  <h2 class="text-2xl font-semibold mb-4">Book a Zoom Session</h2>
+
+  <form id="zoomForm" class="grid gap-4 max-w-md">
+    <label class="grid gap-2">
+      <span class="text-sm text-gray-600">Session Title</span>
+      <input id="topic" type="text" value="Kintsugi Session" class="border border-line rounded-lg px-3 py-2" />
+    </label>
+
+    <label class="grid gap-2">
+      <span class="text-sm text-gray-600">Start (your local time)</span>
+      <input id="start" type="datetime-local" class="border border-line rounded-lg px-3 py-2" />
+    </label>
+
+    <label class="grid gap-2">
+      <span class="text-sm text-gray-600">Duration (minutes)</span>
+      <input id="duration" type="number" value="60" min="15" step="15" class="border border-line rounded-lg px-3 py-2" />
+    </label>
+
+    <button type="submit" class="px-4 py-2 border border-gold text-gold rounded-lg hover:bg-gold hover:text-white transition">
+      Create Zoom Meeting
+    </button>
+  </form>
+
+  <div id="result" class="mt-4 text-sm"></div>
+</section>
+
+<script>
+  document.getElementById("zoomForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const topic = document.getElementById("topic").value.trim() || "Kintsugi Session";
+    const durationMins = Number(document.getElementById("duration").value) || 60;
+    const local = document.getElementById("start").value;
+    if (!local) {
+      document.getElementById("result").textContent = "Please pick a start date & time.";
+      return;
+    }
+    const startISO = new Date(local).toISOString();
+    const resEl = document.getElementById("result");
+    resEl.textContent = "Creating meeting…";
+
+    try {
+      const resp = await fetch("/api/book", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ topic, startISO, durationMins, timezone: "Asia/Dubai" }),
+      });
+      const data = await resp.json();
+      if (!resp.ok) {
+        resEl.textContent = "Error: " + (data.error || "Failed to create meeting");
+        console.error(data);
+        return;
+      }
+      resEl.innerHTML = `
+        <div class="p-3 rounded-lg border border-line">
+          <div class="mb-2">✅ Meeting created successfully!</div>
+          <div><strong>Join link:</strong> <a class="text-gold underline" href="${data.join_url}" target="_blank">Open Zoom</a></div>
+        </div>
+      `;
+    } catch (err) {
+      resEl.textContent = "Network error: " + err.message;
+    }
+  });
+</script>
 
 
           Kintsugi Dubai
